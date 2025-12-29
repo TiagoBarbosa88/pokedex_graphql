@@ -24,7 +24,6 @@ Uma aplicação moderna de busca de Pokémon construída com **Angular 18**, **G
 
 - 🔍 **Busca de Pokémon** por nome
 - 🖼️ **Imagens oficiais** do Pokémon
-- ⌨️ **Enter key support** para buscar
 - ⚡ **Loading spinner** durante requisição
 - ❌ **Tratamento de erros** com fallback
 - 📱 **UI responsiva** com PrimeNG
@@ -145,7 +144,6 @@ Acesse: **http://localhost:4200**
 3. Veja:
    - ✅ Imagem oficial do Pokémon
    - ✅ Nome formatado
-   - ✅ ID único
 
 ---
 
