@@ -1,0 +1,30 @@
+<div style="max-width: 400px; margin: auto; padding: 2rem;">
+
+  <h2 style="margin-bottom: 1rem;">Pokédex GraphQL</h2>
+
+  <div class="p-inputgroup">
+    <input pInputText placeholder="Digite o nome do Pokémon" [(ngModel)]="pokemonName"
+      (keyup.enter)="buscarPokemon()" />
+    <button pButton label="Buscar" icon="pi pi-search" (click)="buscarPokemon()" class="p-button-primary"></button>
+  </div>
+
+  <p *ngIf="loading" style="margin-top: 1rem;">
+    <i class="pi pi-spin pi-spinner"></i> Carregando...
+  </p>
+  <p *ngIf="error" style="color: red; margin-top: 1rem;">{{ error }}</p>
+
+  <p-card *ngIf="pokemon" [style]="{'margin-top': '1rem'}">
+    <ng-template pTemplate="header">
+      <img [src]="getSprite()" alt="pokemon" style="width: 200px; margin: auto; display: block; padding: 1rem 0;" />
+    </ng-template>
+
+    <h3 style="text-transform: capitalize; text-align: center; margin: 0;">
+      {{ pokemon.name }}
+    </h3>
+
+    <!-- <p style="text-align: center; margin-top: 0.5rem;">
+      <strong>ID:</strong> {{ pokemon.id }}
+    </p> -->
+  </p-card>
+
+</div>
